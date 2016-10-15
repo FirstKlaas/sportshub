@@ -1,11 +1,8 @@
 {
 	"development": {
-		"dialect"  : "postgres",
-		"username" : "developer",
-		"password" : "developer",
-		"port"     : 5432,
-		"database" : "sportshub"
-	},
+    	"dialect": "sqlite",
+    	"storage": "./db.development.sqlite"
+ 	},
 	"production": {
 		"dialect"  : "postgres",
 		"username" : "developer",
