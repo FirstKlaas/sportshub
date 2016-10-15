@@ -1,1 +1,4 @@
-/* sportshub styles */
+@import 'normalize.css';
+@import "styles/base/variables.css";
+@import "styles/components/page.css";
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700';

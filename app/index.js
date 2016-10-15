@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Page from './components/Page';
 
 ReactDOM.render(
-  <h1>Mode: {process.env.NODE_ENV}</h1>,
+  <Page msg="Huhu"/>,
   document.getElementById('app')
 );

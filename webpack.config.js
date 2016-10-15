@@ -76,9 +76,22 @@ module.exports = {
     progress: true,
 
     stats: 'errors-only',
-
+    proxy: {
+        '/api': {
+            target: {
+                host: 'localhost',
+                port: 9090,
+                protocol: 'http'
+            },
+            pathRewrite: {'^/api' : ''},
+            secure: false,
+            ignorePath: false,
+            changeOrigin: true
+        }
+    },
     host: HOST,
     port: PORT,
+
 
     // CopyWebpackPlugin: This is required for webpack-dev-server.
     // The path should be an absolute path to your build destination.

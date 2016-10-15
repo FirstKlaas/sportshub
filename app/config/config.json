@@ -1,0 +1,16 @@
+{
+	"development": {
+		"dialect"  : "postgres",
+		"username" : "developer",
+		"password" : "developer",
+		"port"     : 5432,
+		"database" : "sportshub"
+	},
+	"production": {
+		"dialect"  : "postgres",
+		"username" : "developer",
+		"password" : "developer",
+		"port"     : 5432,
+		"database" : "sportshub"
+	}
+}
