@@ -7,12 +7,6 @@
     padding: 40px 0px;
 }
 
-.card--selected {
-    @extend .card;
-    background-color: dodgerblue;
-    color: white;
-}
-
 .card {
     transition: background-color 0.2s ease;
     display: flex;
@@ -32,3 +26,10 @@
     background-color: $warning;
     color: white;
 }
+
+.card--selected {
+    @extend .card;
+    background-color: dodgerblue;
+    color: white;
+}
+

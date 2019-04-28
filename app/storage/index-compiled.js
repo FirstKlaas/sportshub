@@ -3,13 +3,20 @@
 var fs = require("fs");
 var path = require("path");
 var Sequelize = require("sequelize");
-var sequelize = new Sequelize('postgres://developer:developer@localhost:5432/sportshub');
+var env = process.env.NODE_ENV || 'development';
+var config = require(path.join(__dirname, '..', 'config', 'config.json'))[env];
+var sequelize = new Sequelize(config.database, config.username, config.password, config);
 
 db = {};
 
 var model = sequelize.import(path.join(__dirname, 'user.js'));
 db[model.name] = model;
-console.log('Imported ' + model.name);
+
+var model = sequelize.import(path.join(__dirname, 'session.js'));
+db[model.name] = model;
+
+var model = sequelize.import(path.join(__dirname, 'entry.js'));
+db[model.name] = model;
 
 Object.keys(db).forEach(function (modelName) {
     console.log(db[modelName]);
